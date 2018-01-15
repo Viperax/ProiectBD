@@ -1,0 +1,1 @@
+EXEC usp_statistica_an3 2,1,1

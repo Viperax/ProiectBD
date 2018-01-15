@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7a26853df753407092c4448cf26c1b91" Name="Diagram1">
+        <EntityTypeShape EntityType="CatalogModel.AnScolar" Width="1.5" PointX="7.5" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatalogModel.Cadru" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatalogModel.Departamnet" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatalogModel.Facultate" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatalogModel.Grupa" Width="1.5" PointX="9.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatalogModel.Materie" Width="1.5" PointX="15" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatalogModel.Nota" Width="1.5" PointX="20.25" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatalogModel.Specializare" Width="1.5" PointX="7.5" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatalogModel.Student" Width="1.5" PointX="12.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatalogModel.StudentiGrupa" Width="1.5" PointX="18" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatalogModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatalogModel.CATALOG_CU_NOTE_TEMPORAR" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatalogModel.CATALOG_TEMPORAR" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatalogModel.NOTE_TEMPORAR" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatalogModel.SpecializariE" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CatalogModel.SpecializariM" Width="1.5" PointX="9.75" PointY="2.75" IsExpanded="true" />
+        <AssociationConnector Association="CatalogModel.FK_Grupa_AnScolar" ManuallyRouted="false" />
+        <AssociationConnector Association="CatalogModel.FK_Nota_AnScolar" ManuallyRouted="false" />
+        <AssociationConnector Association="CatalogModel.FK_Student_AnScolar" ManuallyRouted="false" />
+        <AssociationConnector Association="CatalogModel.FK_Facultate_Cadru" ManuallyRouted="false" />
+        <AssociationConnector Association="CatalogModel.FK_Facultate_Cadru1" ManuallyRouted="false" />
+        <AssociationConnector Association="CatalogModel.FK_Facultate_Cadru2" ManuallyRouted="false" />
+        <AssociationConnector Association="CatalogModel.FK_Materie_Cadru" ManuallyRouted="false" />
+        <AssociationConnector Association="CatalogModel.FK_Materie_Cadru1" ManuallyRouted="false" />
+        <AssociationConnector Association="CatalogModel.FK_Materie_Cadru2" ManuallyRouted="false" />
+        <AssociationConnector Association="CatalogModel.FK_Materie_Cadru3" ManuallyRouted="false" />
+        <AssociationConnector Association="CatalogModel.FK_Departamnet_Facultate" ManuallyRouted="false" />
+        <AssociationConnector Association="CatalogModel.FK_Specializare_Departamnet" ManuallyRouted="false" />
+        <AssociationConnector Association="CatalogModel.FK_Grupa_Specializare" ManuallyRouted="false" />
+        <AssociationConnector Association="CatalogModel.FK_Materie_Grupa" ManuallyRouted="false" />
+        <AssociationConnector Association="CatalogModel.FK_StudentiGrupa_Grupa" ManuallyRouted="false" />
+        <AssociationConnector Association="CatalogModel.FK_Nota_Materie" ManuallyRouted="false" />
+        <AssociationConnector Association="CatalogModel.FK_Nota_Student" ManuallyRouted="false" />
+        <AssociationConnector Association="CatalogModel.FK_Student_Specializare" ManuallyRouted="false" />
+        <AssociationConnector Association="CatalogModel.FK_StudentiGrupa_Student" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

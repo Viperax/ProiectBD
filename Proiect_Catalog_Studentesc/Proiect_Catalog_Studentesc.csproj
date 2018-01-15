@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B0883AC-40DE-4BE6-93C3-BD94359C489F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Proiect_Catalog_Studentesc</RootNamespace>
+    <AssemblyName>Proiect_Catalog_Studentesc</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\..\Downloads\Mozilla\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.12.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.12\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnScolar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cadru.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CATALOG_CU_NOTE_TEMPORAR.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CATALOG_TEMPORAR.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin_AdaugaCadru.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin_AdaugaCadru.Designer.cs">
+      <DependentUpon>Admin_AdaugaCadru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin_AdaugaAnScolarFirstPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin_AdaugaAnScolarFirstPage.Designer.cs">
+      <DependentUpon>Admin_AdaugaAnScolarFirstPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin_AdaugaNota.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin_AdaugaNota.Designer.cs">
+      <DependentUpon>Admin_AdaugaNota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin_AdaugareDepartament.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin_AdaugareDepartament.Designer.cs">
+      <DependentUpon>Admin_AdaugareDepartament.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin_AdaugareGrupa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin_AdaugareGrupa.Designer.cs">
+      <DependentUpon>Admin_AdaugareGrupa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin_AdaugareMaterie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin_AdaugareMaterie.Designer.cs">
+      <DependentUpon>Admin_AdaugareMaterie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin_AdaugaSpecializare.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin_AdaugaSpecializare.Designer.cs">
+      <DependentUpon>Admin_AdaugaSpecializare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin_AdaugaStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin_AdaugaStudent.Designer.cs">
+      <DependentUpon>Admin_AdaugaStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin_AdaugaStudentiGrupa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin_AdaugaStudentiGrupa.Designer.cs">
+      <DependentUpon>Admin_AdaugaStudentiGrupa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin_Log.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin_Log.Designer.cs">
+      <DependentUpon>Admin_Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Cadru_AfisareMaterii.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Cadru_AfisareMaterii.Designer.cs">
+      <DependentUpon>Cadru_AfisareMaterii.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Cadru_AfisareStatistici.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Cadru_AfisareStatistici.Designer.cs">
+      <DependentUpon>Cadru_AfisareStatistici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Cadru_AfisareStudentiNote.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Cadru_AfisareStudentiNote.Designer.cs">
+      <DependentUpon>Cadru_AfisareStudentiNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Cadru_FirstPageStatistici.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Cadru_FirstPageStatistici.Designer.cs">
+      <DependentUpon>Cadru_FirstPageStatistici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Cadru_Log.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Cadru_Log.Designer.cs">
+      <DependentUpon>Cadru_Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Cadru_ViewSpecializari_Decan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Cadru_ViewSpecializari_Decan.Designer.cs">
+      <DependentUpon>Cadru_ViewSpecializari_Decan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\firstPageAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\firstPageAdmin.Designer.cs">
+      <DependentUpon>firstPageAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FirstPageCadru.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FirstPageCadru.Designer.cs">
+      <DependentUpon>FirstPageCadru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Information.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Information.Designer.cs">
+      <DependentUpon>Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MainPageStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MainPageStudent.Designer.cs">
+      <DependentUpon>MainPageStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Main_Buttons.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Main_Buttons.Designer.cs">
+      <DependentUpon>Main_Buttons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Student_Afisare_Materii.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Student_Afisare_Materii.Designer.cs">
+      <DependentUpon>Student_Afisare_Materii.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Student_Export.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Student_Export.Designer.cs">
+      <DependentUpon>Student_Export.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Student_Log.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Student_Log.Designer.cs">
+      <DependentUpon>Student_Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Departamnet.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Export.cs" />
+    <Compile Include="Facultate.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormError.Designer.cs">
+      <DependentUpon>FormError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grupa.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LogOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogOut.Designer.cs">
+      <DependentUpon>LogOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materie.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Nota.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NOTE_TEMPORAR.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Specializare.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SpecializariE.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SpecializariM.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Student.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StudentiGrupa.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_catalog_sesiunea_x_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_statistica_an1_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_statistica_an2_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_statistica_an3_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_statistica_an4_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controls\Admin_AdaugaCadru.resx">
+      <DependentUpon>Admin_AdaugaCadru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Admin_AdaugaAnScolarFirstPage.resx">
+      <DependentUpon>Admin_AdaugaAnScolarFirstPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Admin_AdaugaNota.resx">
+      <DependentUpon>Admin_AdaugaNota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Admin_AdaugareDepartament.resx">
+      <DependentUpon>Admin_AdaugareDepartament.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Admin_AdaugareGrupa.resx">
+      <DependentUpon>Admin_AdaugareGrupa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Admin_AdaugareMaterie.resx">
+      <DependentUpon>Admin_AdaugareMaterie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Admin_AdaugaSpecializare.resx">
+      <DependentUpon>Admin_AdaugaSpecializare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Admin_AdaugaStudent.resx">
+      <DependentUpon>Admin_AdaugaStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Admin_AdaugaStudentiGrupa.resx">
+      <DependentUpon>Admin_AdaugaStudentiGrupa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Admin_Log.resx">
+      <DependentUpon>Admin_Log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Cadru_AfisareMaterii.resx">
+      <DependentUpon>Cadru_AfisareMaterii.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Cadru_AfisareStatistici.resx">
+      <DependentUpon>Cadru_AfisareStatistici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Cadru_AfisareStudentiNote.resx">
+      <DependentUpon>Cadru_AfisareStudentiNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Cadru_FirstPageStatistici.resx">
+      <DependentUpon>Cadru_FirstPageStatistici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Cadru_Log.resx">
+      <DependentUpon>Cadru_Log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Cadru_ViewSpecializari_Decan.resx">
+      <DependentUpon>Cadru_ViewSpecializari_Decan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\firstPageAdmin.resx">
+      <DependentUpon>firstPageAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FirstPageCadru.resx">
+      <DependentUpon>FirstPageCadru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Information.resx">
+      <DependentUpon>Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MainPageStudent.resx">
+      <DependentUpon>MainPageStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Main_Buttons.resx">
+      <DependentUpon>Main_Buttons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Student_Afisare_Materii.resx">
+      <DependentUpon>Student_Afisare_Materii.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Student_Export.resx">
+      <DependentUpon>Student_Export.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Student_Log.resx">
+      <DependentUpon>Student_Log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormError.resx">
+      <DependentUpon>FormError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogOut.resx">
+      <DependentUpon>LogOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Photos\power.png" />
+    <None Include="bin\Debug\Photos\minimize.png" />
+    <None Include="bin\Debug\Photos\student.png" />
+    <None Include="bin\Debug\Photos\cadru.png" />
+    <None Include="bin\Debug\Photos\stusadent_00000.png" />
+    <None Include="bin\Debug\Photos\Log_cadru.png" />
+    <None Include="bin\Debug\Photos\ok.png" />
+    <None Include="bin\Debug\Photos\log_out.png" />
+    <None Include="bin\Debug\Photos\CSV_00000.png" />
+    <None Include="bin\Debug\Photos\excel_00000.png" />
+    <None Include="bin\Debug\Photos\PDF_00000.png" />
+    <None Include="bin\Debug\Photos\photo_Export.png" />
+    <None Include="bin\Debug\Photos\cauta.png" />
+    <None Include="bin\Debug\Photos\search_button.png" />
+    <None Include="bin\Debug\Photos\statistics_button.png" />
+    <None Include="bin\Debug\Photos\specializari.png" />
+    <None Include="bin\Debug\Photos\student_Note.png" />
+    <None Include="bin\Debug\Photos\carte_00000.png" />
+    <None Include="bin\Debug\Photos\creion_00000.png" />
+    <None Include="bin\Debug\Photos\glob_00000.png" />
+    <None Include="bin\Debug\Photos\Specializari_back_00000.png" />
+    <None Include="bin\Debug\Photos\spcializari_back_00000.png" />
+    <None Include="bin\Debug\Photos\0.png" />
+    <None Include="bin\Debug\Photos\Statistici.png" />
+    <None Include="bin\Debug\Photos\colac1_00000.png" />
+    <None Include="bin\Debug\Photos\colac2_00000.png" />
+    <None Include="bin\Debug\Photos\year.png" />
+    <None Include="bin\Debug\Photos\depart_00000.png" />
+    <None Include="bin\Debug\Photos\grupa_00000.png" />
+    <None Include="bin\Debug\Photos\materie_00000.png" />
+    <None Include="bin\Debug\Photos\addStud_00000.png" />
+    <None Include="bin\Debug\Photos\add_prof_00000.png" />
+    <None Include="bin\Debug\Photos\calc_00000.png" />
+    <None Include="bin\Debug\Photos\50-creion_00000.png" />
+    <None Include="bin\Debug\Photos\ochelari.png" />
+    <None Include="bin\Debug\Photos\phoene.png" />
+    <None Include="bin\Debug\Photos\stickers.png" />
+    <None Include="bin\Debug\Photos\year_add.png" />
+    <None Include="bin\Debug\Photos\calendar2.png" />
+    <None Include="bin\Debug\Photos\teacher.png" />
+    <None Include="bin\Debug\Photos\note.png" />
+    <None Include="bin\Debug\Photos\departament.png" />
+    <None Include="bin\Debug\Photos\grupa.png" />
+    <None Include="bin\Debug\Photos\m2aterie.png" />
+    <None Include="bin\Debug\Photos\specializare.png" />
+    <None Include="bin\Debug\Photos\addSstud.png" />
+    <None Include="bin\Debug\Photos\studsgroup.png" />
+    <None Include="bin\Debug\Photos\question.png" />
+    <None Include="bin\Debug\Photos\questionmark.png" />
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
